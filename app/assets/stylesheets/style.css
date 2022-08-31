@@ -1,0 +1,25 @@
+#navbarSupportedContent {
+  justify-content: end;
+}
+
+.active a {
+  text-decoration: none;
+  color: black;
+  margin-right: 50px;
+}
+
+.row {
+  justify-content: center;
+}
+
+.form-label, .form-control {
+  margin: 10px 0;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+}
+
+#navbarDropdown {
+  margin-right: 20px;
+}
