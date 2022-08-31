@@ -12,6 +12,18 @@
 
 ActiveRecord::Schema.define(version: 2022_08_28_033513) do
 
+  create_table "stores", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description", null: false
+    t.string "address", null: false
+    t.integer "phone", null: false
+    t.string "image", null: false
+    t.string "open_time", default: "8h00-22h00", null: false
+    t.integer "status", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "name", default: "", null: false

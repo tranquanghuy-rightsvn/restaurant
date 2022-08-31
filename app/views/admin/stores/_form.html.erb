@@ -1,0 +1,14 @@
+<%= form_for store, url: url , method: method do |f| %>
+  Name: <%= f.text_field :name, class: "form-control" %><br />
+  Image: <%= f.file_field :image, class: "form-control" %><br />
+  Address: <%= f.text_field :address, class: "form-control" %><br />
+  Description: <%= f.text_area :description, class: "form-control" %><br />
+  Phone: <%= f.number_field :phone, class: "form-control" %><br />
+  Open time: <%= f.text_field :open_time, class: "form-control" %><br />
+
+  <% if store.persisted? %>
+    <%= f.submit "Update", class: "btn btn-dark" %>
+  <% else %>
+    <%= f.submit "Create", class: "btn btn-success" %>
+  <% end %>
+<% end %>
